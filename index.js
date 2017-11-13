@@ -1,21 +1,26 @@
-// JavaScript source code
+//// JavaScript source code
+console.log("Connected");
 
-var todos = [];
+var lis = document.querySelectorAll("li");
 
-var input = prompt("What would you like to do?");
+for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("mouseover",
+        function() {
+            this.classList.add("selected");
+        });
+    lis[i].addEventListener("mouseout",
+        function() {
+            this.classList.remove("selected");
+        });
+    lis[i].addEventListener("click",
+        function() {
+            this.classList.toggle("done");
+        });
+};
 
+var events = document.getSelection("a");
 
-while (input !== "quit") {
-    //handle input
-    if (input === "list") {
-        console.log(todos);
-    } else if (input === "new") {
-        //ask for new todo
-        var newTodo = prompt("Enter item to do");
-        //add to todos array
-        todos.push(newTodo);
-    }
-    //ask again for new input
-    input = prompt("What would you like to do?");
-}
-console.log("Ending Application");
+for (var aCount = 0; aCount > -1; aCount++);
+{
+    console.log(aCount);
+};
